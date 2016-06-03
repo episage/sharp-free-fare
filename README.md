@@ -1,4 +1,4 @@
-[Libnfc .NET wrapper](https://github.com/episage/typescript-es7-boilerplate)
+[libfreefare .NET wrapper](https://github.com/episage/SharpFreeFare)
 ====================
 
 This is .NET project which lets you use [libfreefare](https://github.com/nfc-tools/libfreefare) from .NET C# or F#.
