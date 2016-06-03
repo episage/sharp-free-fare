@@ -11,6 +11,7 @@ Requirements
 - Mono
 - installed libnfc
 - installed libfreefare
+- C# project [SharpNFC](https://github.com/episage/SharpNfc) referenced in the same solution
 
 Installation
 ---------------------

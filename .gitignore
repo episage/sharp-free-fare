@@ -184,3 +184,6 @@ UpgradeLog*.htm
 
 # Microsoft Fakes
 FakesAssemblies/
+
+SharpFreeFare.sln
+SharpFreeFare.userprefs
