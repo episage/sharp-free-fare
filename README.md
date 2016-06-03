@@ -3,7 +3,6 @@
 
 This is .NET project which lets you use [libfreefare](https://github.com/nfc-tools/libfreefare) from .NET C# or F#.
 
-
 Requirements
 ---------------------
 
@@ -20,7 +19,6 @@ In this particular case I used:
 
 - Raspberry PI
 - Arch Linux
-
 
 Below is the code I use to download sources of libfreefare, libnfc, compile and install them.
 
@@ -59,12 +57,10 @@ blacklist pn533
 blacklist nfc
 ```
 
-
 Usage
 ---------------------
 
 Attach this project to your solution and reference it.
-
 
 Contributions
 ---------------------
