@@ -3,6 +3,10 @@
 
 This is .NET project which lets you use [libfreefare](https://github.com/nfc-tools/libfreefare) from .NET C# or F#.
 
+Related projects
+---------------------
+https://github.com/episage/SharpNFC
+
 Requirements
 ---------------------
 
