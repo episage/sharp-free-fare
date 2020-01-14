@@ -18,3 +18,13 @@ C:\Users\xavie\source\repos\sharp-free-fare-windows-lib\obj\Debug\SharpFreeFare.
 C:\Users\xavie\source\repos\sharp-free-fare-windows-lib\obj\Debug\SharpFreeFare.csproj.CopyComplete
 C:\Users\xavie\source\repos\sharp-free-fare-windows-lib\obj\Debug\SharpFreeFare.dll
 C:\Users\xavie\source\repos\sharp-free-fare-windows-lib\obj\Debug\SharpFreeFare.pdb
+C:\Users\xavie\source\repos\sharp-free-fare_wlib\bin\Debug\libnfc.dll
+C:\Users\xavie\source\repos\sharp-free-fare_wlib\bin\Debug\libfreefare.dll
+C:\Users\xavie\source\repos\sharp-free-fare_wlib\bin\Debug\SharpFreeFare.dll
+C:\Users\xavie\source\repos\sharp-free-fare_wlib\bin\Debug\SharpFreeFare.pdb
+C:\Users\xavie\source\repos\sharp-free-fare_wlib\bin\Debug\SharpNFC.dll
+C:\Users\xavie\source\repos\sharp-free-fare_wlib\bin\Debug\SharpNFC.pdb
+C:\Users\xavie\source\repos\sharp-free-fare_wlib\obj\Debug\SharpFreeFare.csprojAssemblyReference.cache
+C:\Users\xavie\source\repos\sharp-free-fare_wlib\obj\Debug\SharpFreeFare.csproj.CopyComplete
+C:\Users\xavie\source\repos\sharp-free-fare_wlib\obj\Debug\SharpFreeFare.dll
+C:\Users\xavie\source\repos\sharp-free-fare_wlib\obj\Debug\SharpFreeFare.pdb
