@@ -1,0 +1,12 @@
+C:\Users\xavie\source\repos\sharp-free-fare\sharp-nfc\bin\Debug\SharpNFC.dll
+C:\Users\xavie\source\repos\sharp-free-fare\sharp-nfc\bin\Debug\SharpNFC.pdb
+C:\Users\xavie\source\repos\sharp-free-fare\sharp-nfc\obj\Debug\SharpNFC.csprojAssemblyReference.cache
+C:\Users\xavie\source\repos\sharp-free-fare\sharp-nfc\obj\Debug\SharpNFC.dll
+C:\Users\xavie\source\repos\sharp-free-fare\sharp-nfc\obj\Debug\SharpNFC.pdb
+C:\Users\xavie\source\repos\sharp-free-fare\sharp-nfc\bin\Debug\libnfc.dll
+C:\Users\xavie\source\repos\sharp-free-fare-windows-lib\sharp-nfc\bin\Debug\libnfc.dll
+C:\Users\xavie\source\repos\sharp-free-fare-windows-lib\sharp-nfc\bin\Debug\SharpNFC.dll
+C:\Users\xavie\source\repos\sharp-free-fare-windows-lib\sharp-nfc\bin\Debug\SharpNFC.pdb
+C:\Users\xavie\source\repos\sharp-free-fare-windows-lib\sharp-nfc\obj\Debug\SharpNFC.csprojAssemblyReference.cache
+C:\Users\xavie\source\repos\sharp-free-fare-windows-lib\sharp-nfc\obj\Debug\SharpNFC.dll
+C:\Users\xavie\source\repos\sharp-free-fare-windows-lib\sharp-nfc\obj\Debug\SharpNFC.pdb

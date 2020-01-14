@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("SharpFreeFare")]
+[assembly: AssemblyTitle("SharpNFC")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("SharpFreeFare")]
+[assembly: AssemblyProduct("SharpNFC")]
 [assembly: AssemblyCopyright("Copyright ©  2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("a1029520-51d6-47e2-a1fb-1c909ccf9fec")]
+[assembly: Guid("eb4fe3aa-9a8f-429a-b6ce-b67d65ee7008")]
 
 // Version information for an assembly consists of the following four values:
 //

@@ -1,11 +1,11 @@
-[libfreefare .NET wrapper](https://github.com/episage/SharpFreeFare)
+[Libnfc .NET wrapper](https://github.com/episage/SharpNfc)
 ====================
 
-This is .NET project which lets you use [libfreefare](https://github.com/nfc-tools/libfreefare) from .NET C# or F#.
+This is .NET project which lets you use libnfc [NFC Tools](http://nfc-tools.org/index.php?title=Libnfc) from .NET C# or F#.
 
 Related projects
 ---------------------
-https://github.com/episage/SharpNFC
+https://github.com/episage/SharpFreeFare - for reading MiFare cards (http://www.nxp.com/products/identification-and-security/mifare-ics/mifare-desfire:MC_53450)
 
 Requirements
 ---------------------
@@ -13,8 +13,6 @@ Requirements
 - Linux
 - Mono
 - installed libnfc
-- installed libfreefare
-- C# project [SharpNFC](https://github.com/episage/SharpNfc) referenced in the same solution
 
 Installation
 ---------------------
@@ -24,21 +22,14 @@ In this particular case I used:
 - Raspberry PI
 - Arch Linux
 
-Below is the code I use to download sources of libfreefare, libnfc, compile and install them.
+
+Below is the code I use to download sources of libnfc, compile and install them.
 
 ```bash
-wget https://libfreefare.googlecode.com/files/libfreefare-0.4.0.tar.bz2
-wget https://libnfc.googlecode.com/files/libnfc-1.7.0.tar.bz2
-tar xvjf libnfc-1.7.0.tar.bz2
-tar xvjf libfreefare-0.4.0.tar.bz2
+wget https://github.com/nfc-tools/libnfc/releases/download/libnfc-1.7.1/libnfc-1.7.1.tar.bz2
+tar xvjf libnfc-1.7.1.tar.bz2
 
 cd libnfc-1.7.0
-./configure --prefix=/usr
-make
-make install
-cd ..
-
-cd libfreefare-0.4.0
 ./configure --prefix=/usr
 make
 make install
@@ -61,15 +52,17 @@ blacklist pn533
 blacklist nfc
 ```
 
+
 Usage
 ---------------------
 
 Attach this project to your solution and reference it.
+
 
 Contributions
 ---------------------
 
 Please contribute to this project
 
-- update libfreefare and other dependencies in the bash script above
-- make sure that the .NET unmanaged code is compatible with current libfreefare
+- update libnfc and other dependencies in the bash script above
+- make sure that the .NET unmanaged code is compatible with current libnfc
