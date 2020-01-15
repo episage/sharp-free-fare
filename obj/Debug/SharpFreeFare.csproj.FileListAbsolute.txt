@@ -28,3 +28,4 @@ C:\Users\xavie\source\repos\sharp-free-fare_wlib\obj\Debug\SharpFreeFare.csprojA
 C:\Users\xavie\source\repos\sharp-free-fare_wlib\obj\Debug\SharpFreeFare.csproj.CopyComplete
 C:\Users\xavie\source\repos\sharp-free-fare_wlib\obj\Debug\SharpFreeFare.dll
 C:\Users\xavie\source\repos\sharp-free-fare_wlib\obj\Debug\SharpFreeFare.pdb
+C:\Users\xavie\source\repos\sharp-free-fare_wlib\bin\Debug\mifare_x64.dll

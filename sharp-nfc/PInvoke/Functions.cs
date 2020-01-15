@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace SharpNFC.PInvoke
 {
-    internal static class Functions
+    public static class Functions
     {
         /* Library initialization/deinitialization */
         //nfc_init
@@ -24,7 +24,7 @@ namespace SharpNFC.PInvoke
         /* NFC Device/Hardware manipulation */
         //nfc_open
         //NFC_EXPORT nfc_device *nfc_open(nfc_context *context, const nfc_connstring connstring) ATTRIBUTE_NONNULL(1);
-        [DllImport("libnfc.dll", CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("libnfc.dll", CallingConvention = CallingConvention.Cdecl, CharSet = CharSet.Unicode)]
         public static extern IntPtr nfc_open(IntPtr context, string connstring);
         //nfc_close
         //NFC_EXPORT void nfc_close(nfc_device *pnd);
@@ -52,7 +52,7 @@ namespace SharpNFC.PInvoke
         //nfc_initiator_select_passive_target
         //NFC_EXPORT int nfc_initiator_select_passive_target(nfc_device *pnd, const nfc_modulation nm, const uint8_t *pbtInitData, const size_t szInitData, nfc_target *pnt);
         [DllImport("libnfc.dll", CallingConvention = CallingConvention.Cdecl)]
-        public static extern int nfc_initiator_select_passive_target(IntPtr pnd, nfc_modulation nm, [MarshalAs(UnmanagedType.LPArray, SizeParamIndex = 3)] byte[] pbtInitData, uint szInitData, IntPtr pnt);
+        public static extern int nfc_initiator_select_passive_target(IntPtr pnd, nfc_modulation nm, [MarshalAs(UnmanagedType.LPArray, SizeParamIndex = 3)] byte[] pbtInitData, uint szInitData, out nfc_target nt);
         //nfc_initiator_list_passive_targets
         //NFC_EXPORT int nfc_initiator_list_passive_targets(nfc_device *pnd, const nfc_modulation nm, nfc_target ant[], const size_t szTargets);
         [DllImport("libnfc.dll", CallingConvention = CallingConvention.Cdecl)]
@@ -106,13 +106,13 @@ namespace SharpNFC.PInvoke
 
         /* Error reporting */
         //NFC_EXPORT char *nfc_strerror(nfc_device *pnd);
-        [DllImport("libnfc.dll", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("libnfc.dll", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
         public static extern string nfc_strerror(IntPtr pnd);
         //NFC_EXPORT int nfc_strerror_r(nfc_device *pnd, char *buf, size_t buflen);
-        [DllImport("libnfc.dll", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("libnfc.dll", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
         public static extern int nfc_strerror_r(IntPtr pnd, string buf, uint buflen);
         //NFC_EXPORT void nfc_perror(nfc_device *pnd, char *s);
-        [DllImport("libnfc.dll", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("libnfc.dll", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
         public static extern void nfc_perror(IntPtr pnd, string s);
         //NFC_EXPORT int nfc_device_get_last_error(nfc_device *pnd);
         [DllImport("libnfc.dll", CallingConvention = CallingConvention.Cdecl)]
@@ -120,10 +120,10 @@ namespace SharpNFC.PInvoke
 
         /* Special data accessors */
         //NFC_EXPORT char *nfc_device_get_name(nfc_device *pnd);
-        [DllImport("libnfc.dll", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
-        public static extern string nfc_device_get_name(IntPtr pnd);
+        [DllImport("libnfc.dll", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
+        public static extern IntPtr nfc_device_get_name(IntPtr pnd);
         //NFC_EXPORT char *nfc_device_get_connstring(nfc_device *pnd);
-        [DllImport("libnfc.dll", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("libnfc.dll", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
         public static extern string nfc_device_get_connstring(IntPtr pnd);
         //NFC_EXPORT int nfc_device_get_supported_modulation(nfc_device *pnd, nfc_mode mode,  nfc_modulation_type **supported_mt);
         [DllImport("libnfc.dll", CallingConvention = CallingConvention.Cdecl)]
@@ -164,19 +164,21 @@ namespace SharpNFC.PInvoke
         [DllImport("libnfc.dll", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         public static extern IntPtr nfc_version();
         //NFC_EXPORT int nfc_device_get_information_about(nfc_device *pnd, char **buf);
-        [DllImport("libnfc.dll", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("libnfc.dll", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
         public static extern int nfc_device_get_information_about(IntPtr pnd, ref string buf);
 
         /* String converter functions */
         //NFC_EXPORT char *str_nfc_modulation_type(nfc_modulation_type nmt);
-        [DllImport("libnfc.dll", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("libnfc.dll", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
         public static extern string str_nfc_modulation_type(nfc_modulation_type nmt);
         //NFC_EXPORT char *str_nfc_baud_rate(nfc_baud_rate nbr);
-        [DllImport("libnfc.dll", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("libnfc.dll", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
         public static extern string str_nfc_baud_rate(nfc_baud_rate nbr);
         //NFC_EXPORT int str_nfc_target(char **buf, nfc_target *pnt, bool verbose);
-        [DllImport("libnfc.dll", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
-        public static extern int str_nfc_target(ref string buf, IntPtr pnt, bool verbose);
+        [DllImport("libnfc.dll", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
+        public static extern int str_nfc_target(ref IntPtr buf, nfc_target pnt, bool verbose);
 
+        [DllImport("msvcrt.dll", EntryPoint = "memset", CallingConvention = CallingConvention.Cdecl, SetLastError = false)]
+        public static extern IntPtr MemSet(IntPtr dest, int c, IntPtr count);
     }
 }

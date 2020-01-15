@@ -44,6 +44,7 @@
     <Compile Include="NFCDevice.cs" />
     <Compile Include="PInvoke\Constants.cs" />
     <Compile Include="PInvoke\Functions.cs" />
+    <Compile Include="PInvoke\mifare_classic_tag.cs" />
     <Compile Include="PInvoke\nfc_baud_rate.cs" />
     <Compile Include="PInvoke\nfc_context.cs" />
     <Compile Include="PInvoke\nfc_dep_info.cs" />
@@ -73,6 +74,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="libnfc.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="mifare_x64.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

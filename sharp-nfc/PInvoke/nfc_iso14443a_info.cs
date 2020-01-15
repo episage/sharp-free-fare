@@ -19,7 +19,7 @@ namespace SharpNFC.PInvoke
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 2)]
         public byte[] abtAtqa;
         public byte btSak;
-        public uint szUidLen;
+        public UIntPtr szUidLen;
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 10)]
         public byte[] abtUid;
         public uint szAtsLen;

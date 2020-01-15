@@ -1,4 +1,5 @@
 ﻿using SharpFreeFare.PInvoke;
+using SharpNFC.PInvoke;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -42,6 +43,11 @@ namespace SharpFreeFare
         [DllImport("libfreefare.dll")]
         // int mifare_desfire_disconnect (MifareTag tag)
         public static extern int mifare_desfire_disconnect(IntPtr tag);
-       
+
+        [DllImport("mifare_x64.dll")]
+        public static extern bool nfc_initiator_mifare_cmd(IntPtr pnd, mifare_cmd mc, byte ui8Block, ref mifare_param pmp);
+
+        [DllImport("msvcrt.dll", EntryPoint = "memcpy", CallingConvention = CallingConvention.Cdecl, SetLastError = false)]
+        public static extern IntPtr memcpy(IntPtr dest, IntPtr src, UIntPtr count);
     }
 }
