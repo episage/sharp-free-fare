@@ -12,6 +12,7 @@ Requirements
 
 - libnfc dll - (v1.7.1 already included)
 - libfreefare dll (v0.4 included)
+-mifare_x64.dll (included)
  C# project [SharpNFC](https://github.com/episage/SharpNfc) (already included)
 
 Installation
@@ -22,7 +23,7 @@ no further installation needed
 Usage
 ---------------------
 
-Attach this project to your solution and reference it.
+see C# examples in Wiki or more in source code
 
 Contributions
 ---------------------
