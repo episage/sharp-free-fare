@@ -1,4 +1,5 @@
 ﻿using SharpFreeFare.PInvoke;
+using SharpNFC.PInvoke;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,38 +11,43 @@ namespace SharpFreeFare
 {
     public static class Functions
     {
-        [DllImport("libfreefare.so")]
+        [DllImport("libfreefare.dll")]
         //MifareTag* freefare_get_tags (nfc_device *device);
         public static extern IntPtr freefare_get_tags(IntPtr device);
 
 
-        [DllImport("libfreefare.so")]
+        [DllImport("libfreefare.dll")]
         //int mifare_desfire_connect (MifareTag tag)
         public static extern int mifare_desfire_connect(IntPtr tag);
 
-        [DllImport("libfreefare.so")]
+        [DllImport("libfreefare.dll")]
         //int mifare_desfire_select_application (MifareTag tag, MifareDESFireAID aid);
         public static extern int mifare_desfire_select_application(IntPtr tag, IntPtr aid);
 
-        [DllImport("libfreefare.so")]
+        [DllImport("libfreefare.dll")]
         //MifareDESFireAID mifare_desfire_aid_new (uint32_t aid)
         public static extern IntPtr mifare_desfire_aid_new(UInt32 aid);
 
-        [DllImport("libfreefare.so")]
+        [DllImport("libfreefare.dll")]
         //MifareDESFireKey mifare_desfire_3des_key_new (const uint8_t value[16])
         public static extern IntPtr mifare_desfire_3des_key_new([MarshalAs(UnmanagedType.LPArray, SizeConst = 16)] byte[] value);
 
-        [DllImport("libfreefare.so")]
+        [DllImport("libfreefare.dll")]
         //int mifare_desfire_authenticate (MifareTag tag, uint8_t key_no, MifareDESFireKey key)
         public static extern int mifare_desfire_authenticate(IntPtr tag, byte key_no, IntPtr key);
 
-        [DllImport("libfreefare.so")]
+        [DllImport("libfreefare.dll")]
         //ssize_t mifare_desfire_read_data (MifareTag tag, uint8_t file_no, off_t offset, size_t length, void *data)
         public static extern uint mifare_desfire_read_data(IntPtr tag, byte file_no, int offset, uint length, [MarshalAs(UnmanagedType.LPArray, SizeParamIndex = 3)]byte[] data);
 
-        [DllImport("libfreefare.so")]
+        [DllImport("libfreefare.dll")]
         // int mifare_desfire_disconnect (MifareTag tag)
         public static extern int mifare_desfire_disconnect(IntPtr tag);
-       
+
+        [DllImport("mifare_x64.dll")]
+        public static extern bool nfc_initiator_mifare_cmd(IntPtr pnd, mifare_cmd mc, byte ui8Block, ref mifare_param pmp);
+
+        [DllImport("msvcrt.dll", EntryPoint = "memcpy", CallingConvention = CallingConvention.Cdecl, SetLastError = false)]
+        public static extern IntPtr memcpy(IntPtr dest, IntPtr src, UIntPtr count);
     }
 }
