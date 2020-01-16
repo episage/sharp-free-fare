@@ -30,5 +30,5 @@ Contributions
 
 Please contribute to this project
 
-- update libfreefare and other dependencies in the bash script above
+- update libfreefare and other dependencies
 - make sure that the .NET unmanaged code is compatible with current libfreefare
