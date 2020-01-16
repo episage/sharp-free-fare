@@ -5,7 +5,7 @@ This is .NET project which lets you use [libfreefare](https://github.com/nfc-too
 
 Related projects
 ---------------------
-https://github.com/episage/SharpNFC (incuded)
+https://github.com/episage/SharpNFC (included with some small fixes )
 
 Requirements
 ---------------------
@@ -13,7 +13,7 @@ Requirements
 - libnfc dll - (v1.7.1 already included)
 - libfreefare dll (v0.4 included)
 - mifare_x64.dll (included)
-- C# project [SharpNFC](https://github.com/episage/SharpNfc) with some small fixes (already included in solution)
+- C# project [SharpNFC](https://github.com/episage/SharpNfc)(already included in solution)
 
 Installation
 ---------------------
