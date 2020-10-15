@@ -76,6 +76,9 @@
     <Content Include="libnfc.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="libusb0.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="mifare_x64.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
