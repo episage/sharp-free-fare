@@ -1,4 +1,4 @@
-[libfreefare .NET wrapper] based (https://github.com/episage/SharpFreeFare)
+[libfreefare .NET wrapper](https://github.com/episage/SharpFreeFare)
 ====================
 
 This is .NET project which lets you use [libfreefare](https://github.com/nfc-tools/libfreefare) from .NET C# or F#.
